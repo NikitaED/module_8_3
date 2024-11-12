@@ -1,13 +1,3 @@
-class IncorrectVinNumber(Exception):
-    def __init__(self, message):
-        self.message = message
-
-
-class IncorrectCarNumbers(Exception):
-    def __init__(self, message):
-        self.message = message
-
-
 class Car:
     def __init__(self, model, vin, numbers):
         self.model = model
@@ -33,6 +23,14 @@ class Car:
             raise IncorrectCarNumbers("Неверная длина номера")
         else:
             return True
+class IncorrectVinNumber(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
+class IncorrectCarNumbers(Exception):
+    def __init__(self, message):
+        self.message = message
 
 
 try:
